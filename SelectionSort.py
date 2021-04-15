@@ -4,7 +4,7 @@ def Swap(a, b, list):
     list[a] = list[b]
     list[b] = temp
 
-#selection sort
+#selection sort, Sắp xếp theo thứ tự từ bé đến lớn
 def SelectionSort(list):
     n = len(list)
     for i in range(int(n)):
