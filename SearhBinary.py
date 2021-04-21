@@ -11,5 +11,7 @@ def SearchBinary(list, item):
         else:
             low = int(mid + 1)
     return None
+
+
 mylist = [1, 2, 3, 4, 5, 6, 7]
 print(SearchBinary(mylist, 3))

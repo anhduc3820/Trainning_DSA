@@ -1,5 +1,4 @@
 #  Author: OMKAR PATHAK
-
 import SinglyLinkedList
 
 def reverseLinkedList(myLinkedList):
