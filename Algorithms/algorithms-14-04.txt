@@ -1,0 +1,18 @@
+Kiến thức học được:
+Bộ nhớ máy tính hoạt động giống như một cái ngăn kéo có nhiều ngăn, mỗi ngăn chứa mỗi đồ vật với mỗi địa chỉ khác nhau.
+ARRAY: 
+Sử dụng mảng có nghĩa là tất cả các tác vụ được lưu trữ liên tục (Ngay cạnh nhau) trong bộ nhớ.
+Mảng cho phép đọc nhanh.
+Tất cả các phần tử trong mảng phải cùng kiểu
+LINK lIST:
+Mỗi một mục lưu trữ địa chỉ của mục tiếp theo trong danh sách, một loạt các địa chỉ ngẫu nhiên được liên kết với nhau trong bộ nhớ.
+Danh sách liên kết cho phép chèn và xóa nhanh chóng.
+Các thao tác với list:
+Truy cập các giá trị trong list : <ten_list>[index]
+Update list: <ten_list>[index]=<giatri>
+Thêm phần tử vào list: <ten_list>.append(item)
+Xóa phần tử trong list: del <ten_list>[index]
+
+
+Cài đặt thuật toán:
+https://github.com/anhduc3820/Trainning_DSA.git

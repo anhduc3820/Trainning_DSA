@@ -1,0 +1,39 @@
+Recursion
+Đệ quy có nghĩa là hàm gọi lại chính nó.
+Đệ quy gồm 2 phần:
+Phần cơ sở: Phần này bao gồm điều kiện để thoát khỏi đệ quy, Nếu không có phần này thì hàm đệ quy sẽ chạy mãi mãi gây ra tràn bộ nhớ Stack
+Phần đệ quy: Thân hàm có chứa phần gọi đệ quy, chạy cho đến khi thõa mãn điều kiện của phần cơ sở
+Nếu không biết được điệu kiện dừng thì không nên đệ quy, vì sẽ gây ra vòng lặp chạy vô hạn.
+Stack
+Nguyên tắc hoạt động của Stack là LIFO(Vào sau thì ra trước). Khi một biến được khai báo trong hàm thì nó sẽ được đẩy vào Stack. Khi hàm đó kết thúc thì tất cả biến đó sẽ được đẩy ra và giải phóng khỏi Stack.
+Ưu điểm: Thuận lợi cho việc biểu diễn bài toán.
+Nhựợc điểm: Gây tốn bộ nhớ, nếu không có điều kiện dừng thì sẽ gây tràn bộ nhớ Stack, bên cạnh đó việc sử dụng đệ quy tốn nhiều thời gian hơn vòng lặp
+QuickSort
+Là thuật toán sắp xếp dựa trên kỹ thuật chia để trị
+Base case: nếu dãy chỉ còn không quá 1 phần tử thì dãy đó đã được sắp xếp => không cần thao tác thêm gì cả
+Chia: ở thao tác này bao gồm 2 công việc: 
+Chọn 1 phần tử trong dãy làm phần tử chốt p (pivot)
+Phân đoạn: chia dãy đã cho thành 2 dãy con, dãy con trái(L) sẽ gồm những phần tử nhỏ hơn phần tử chốt và dãy con phải(R) là những phần tử lớn hơn phần tử chốt
+Trị: lặp lại 1 cách đệ quy thuật toán với 2 dãy con trái và phải
+Tổng hợp: dãy được sắp xếp L,p,R
+Độ phức tạp của thuật toán:
+Hiệu quả của thuật toán phụ thuộc vào phần tử chốt mà chúng ta chọn
+Phân đoạn không cân bằng: Trường hợp tệ nhất Big O xảy ra khi một dãy đã được sắp xếp mà chúng ta chọn phải phần tử đầu hoặc cuối là phần tử chốt. Khi đó Big O sẽ là O(n^2)
+Phân đoạn hoàn hảo: phân đoạn luôn thực hiện dưới dạng phân thì đôi, mỗi bài toán con có kích thước là n/2 => độ phức tạp thuật toán là O(nlogn)
+Phân đoạn cân bằng: một bài toán con có kích thước n-k và bài toán kia có kích thước là k => độ phức tạp thuật toán là O(n)
+Megre Sort
+Giống như Quick sort, Merge sort là một thuật toán chia để trị. Thuật toán này chia mảng cần sắp xếp thành 2 nửa. Tiếp tục lặp lại việc này ở các nửa mảng đã chia. Sau cùng gộp các nửa đó thành mảng đã sắp xếp.
+Độ phức tạp thuật toán
+Trường hợp tốt: O(nlog(n))
+Trung bình: O(nlog(n))
+Trường hợp xấu: O(nlog(n))
+So sách độ phức tạp của thuật toán của quicksort với các thuật toán khác.
+Quick Sort sẽ là tốt nhất nếu:
+Không lo lắng về đầu vào kể cả trường hợp xấu nhất (trật tự nói chung là ngẫu nhiên)
+Không quan tâm đến dung lượng bộ nhớ, bộ nhớ là hoàn toàn lý tưởng và phù hợp ở đây
+Trong trường hợp, dữ liệu rất ít phần tử (10-20 phần tử), lựa chọn Selection Sort sẽ nhanh hơn Quick Sort
+Hằng số trong ký hiệu Big O đôi khi có thể quan trọng. Đó là lý do tại quicksort nhanh hơn mergesort
+Hằng số hầu như không bao giờ quan trọng đối với search simple so với binary search, bởi vì O (log n) nhanh hơn O (n) rất nhiều khi danh sách trở nên lớn hơn.
+Cài đặt thuật toán
+Link code:
+https://github.com/anhduc3820/Trainning_DSA.git

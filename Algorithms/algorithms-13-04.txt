@@ -1,0 +1,53 @@
+Những thứ học được:
+Thuật toán là tập hợp những hướng dẫn để thực hiện một nhiệm vụ
+Tại sao thời gian lại quan trọng: Vì thời gian chạy lâu gây tốn CPU làm giảm số lượng người dùng mà máy tính/máy chủ có thể phục vụ người dùng.
+Độ phức tạp của thuật toán là một khái niệm/định nghĩa/định lượng tương đối thể hiện số phép toán của giải thuật so với kích thước đầu vào.
+Tìm hiểu về cách chọn giải thuật phù hợp:
+Vì độ phức tạp thuật toán (trên cùng 1 máy) có thể hiểu là nó tỉ lệ thuận (1 cách tương đối) với thời gian chạy.
+VD: Tính tổng các số nguyên từ 1 -> n
+Bài này dùng công thức thì 1 dòng là ra: n*(n+1)/2. 
+Giải thuật này có độ phức tạp là O(1) (1 phép toán).
+Với vòng lặp từ 1 -> n để tính tổng, độ phức tạp là O(n). 
+Với n bằng 1 tỷ, tương đương bạn thực hiện 1 tỷ lần phép toán cộng
+EXERCISES:
+You have a name, and you want to find the person’s phone number
+in the phone book.
+Cách 1: Sử dụng vòng lặp qua từ phần tử thì độ phức tạp thuật toán là O(n)
+Cách 2:(danh bạ là dãy đã sắp xếp)  sử dụng tìm kiếm nhị phân với một nữa đoạn thì độ phức tạp thuật toán là log(2)(n)
+You have a phone number, and you want to find the person’s name
+in the phone book. (Hint: You’ll have to search through the whole
+book!)
+Sử dụng tìm kiếm tuần tự với vòng lặp thì độ phức tạp của thuật toán là O(n)
+You want to read the numbers of every person in the phone book.
+Sử dụng tìm kiếm tuần tự với vòng lặp thì độ phức tạp của thuật toán là O(n)
+
+
+EXERCISES SEARCH BINARY:
+Suppose you have a sorted list of 128 names, and you’re searching
+through it using binary search. What’s the maximum number of
+steps it would take?
+log(2)(128) = 7 steps
+Suppose you double the size of the list. What’s the maximum
+number of steps now?
+
+log(2)(256) = 8 steps
+cài đặt thuật toán tìm kiếm nhị phân
+
+def SearchBinary(list, item):
+   low = 0
+   hight = int(len(list) - 1)
+   while low <= hight:
+       mid = int((low + hight) / 2)
+       guess = list[mid]
+       if guess == item:
+           return mid
+       if guess > item:
+           hight = int(mid - 1)
+       else:
+           low = int(mid + 1)
+   return None
+mylist = [1, 2, 3, 4, 5, 6, 7]
+print(SearchBinary(mylist, 3))
+
+
+
